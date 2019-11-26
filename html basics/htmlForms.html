@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms</title>
+</head>
+<body>
+  <a href="index.html">home</a>
+  <h1>HTML Forms</h1>
+
+  <form>
+
+    <!--type : text, email, password, radio, submit etc etc
+        attributes to input : type, name, id, value, placeholder, required(to make compulsary)
+        alt to input : SELECT (+OPTION) TAG-->
+
+    <label for="username">Username : </label>
+    <!--labels are labels for a input having id such and such-->
+    <input type="text" id="username" name="username" placeholder="username" required>
+    <!--input is that field box for input...
+        type is type of input...
+        id is the unique identifier, connecting with js/css as hooks, connecting with labels
+        name attribute also identifies but more related to php, they also grp diff parts of form together-->
+      <br>
+    <label for="gender">Gender: </label> <br>
+    <input type="radio" name="gender" value="male">Male <br>
+    <input type="radio" name="gender" value="female">Female <br>
+    <input type="radio" name="gender" value="other">Other <br>
+    <!-- see for radio buttons, all have name gender, so grouped together...
+         also the VALUE attribute comes into picture as just clicking on the button needs to provide us with one-->
+     <br>
+    <label for="email">Email id: </label>
+    <input type="email" id="email" name="email" placeholder="email-id" required>
+     <br>
+    <label for="password">Password: </label>
+    <input type="password" id="password" placeholder="password" required>
+      <br>
+
+    <div>
+      <p>Pls enter your age: </p>
+        <input type="radio" name="age" id="opt-1" value="0-25">
+        <label for="opt-1">0-25</label>
+        <input type="radio" name="age" id="opt-2" value="26-50">
+        <label for="opt-2">26-50</label>
+        <input type="radio" name="age" id="opt-3" value="50+">
+        <label for="opt-3">50+</label>
+    </div>
+
+    <br><br>
+
+    <div>
+    <label for="question">Security questions : </label>
+    <select name="question" id="question">
+        <option value="q1">What is your pet's name?</option>
+        <option value="q2">What is your favourite color?</option>
+        <option name="q3">What is your favourite food?</option>
+    </select><br>
+
+    <label for="SecAns">Security question answer: </label>
+    <input type="text" name="SecAns" id="SecAns">
+    </div>
+    <br>
+
+    <label for="bio">Enter your bio: </label><br>
+    <textarea name="bio" id="bio" rows="10" cols="50" placeholder="about you"></textarea>
+    <!-- on the page user can hold and drag to change its size simply, rows and colsl whatever-->
+
+    <br><br>
+
+    <input type="submit" value="Submit the form">
+    <!-- the submit button sends all this data to the ACTION ATTRIBUTE of FORM which can be script or whatever-->
+  </form>
+
+
+</body>
+
+</html>
