@@ -1,0 +1,288 @@
+/*
+CONTAINS: CSS FILE OF MARIO Club
+          position
+          PSEUDO CLASSES AND ELEMENTS
+          RESPONSIVE STYLES
+*/
+
+
+
+/*
+position: static    default
+            relative  relative to original location
+            fixed     fixed in a webpage, always visible, even if move up down
+            absolute  relative to parent
+            sticky    mix of static and fixed
+*/
+
+body, ul, li, h1, h2, a {
+  margin : 0;
+  padding : 0;
+  font-family: arial;
+}
+
+
+header {
+  background-color : #F63232;
+  padding : 20px;
+  text-align : center;
+  position : fixed;
+  width : 100%;
+  z-index : 1;
+  top : 0;
+  left : 0;
+}
+
+header h1 {
+  color : white;
+  display: inline-block;
+  border: solid white 8px;
+  padding : 6px 2px;
+  border-radius: 50px;  /*softens the corner*/
+}
+
+nav {
+background-color: #F4F4F4;
+padding : 20px;
+position: sticky;
+top: 100px;
+}
+
+nav ul {
+  white-space: nowrap;  /*all in one line*/
+  max-width: 1200px;
+  margin : 0 auto;    /*topbottom 0.... left right auto*/
+}
+
+nav li {
+  width: 25%;
+  display: inline-block;
+  font-size: 24px;
+}
+
+nav li a {
+  text-decoration: none;
+  color : #4B4B4B;
+}
+
+.banner img {
+  max-width: 100%;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner .welcome {
+  background-color: #FEB614;
+  color: white;
+  padding : 30px;
+  position: absolute;
+  left : 0%;
+  top : 30%;
+}
+
+.banner h2 {
+  font-size: 74px;
+}
+
+.banner span {
+  font-size: 1.3em;
+}
+
+main {
+  max-width: 100%;
+  width: 1200px;
+  margin : 80px auto;
+  padding : 0 40px;
+  box-sizing: border-box;/*padding part of margin*/
+}
+
+article h2 {
+  color : #F63232;
+  font-size: 48px;
+}
+
+article p {
+  line-height: 2em;
+  color : #4B4B4B;
+}
+
+.images {
+  text-align:  center;
+  margin : 80px 0px;
+  white-space: nowrap;
+}
+
+.images li{
+display: inline-block;
+width : 40%;
+margin: 20px 5%;
+}
+
+.images li img {
+  max-width: 100%;
+}
+
+section.join {
+  background: #F4F4F4;
+  text-align: center;
+  padding: 60px 20px;
+  color: #4B4B4B;
+}
+
+.join h2 {
+  font-size: 2.5em;
+}
+
+.join input {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 28px;
+  border: white solid 5px;
+}
+
+footer {
+  color : white;
+  background: #F63232;
+  padding : 10px;
+  text-align: center;
+}
+
+
+/*PSEUDO CLASSES: style when in a particular state like hover, focus, first child*/
+/* :hover   :focus    :first-child*/
+
+nav li :hover {
+  text-decoration: underline;
+}
+
+.images li :hover{
+  position: relative;
+  bottom: 5px;   /*or top : -5px;*/
+}
+
+form input:focus {
+  border : 4px dashed black;
+  outline : none;
+}
+
+form input:valid {
+  border : 4px solid #71d300;
+  background: darkgreen;
+}
+
+/*first li in nav*/
+/*
+nav li:first-child {
+  border: blue solid 5px;
+}
+*/
+
+/* active  select the active link
+   empty   p:empty     every p element that has no child
+   first-of-type  first p of parent
+   disabled, enabled    select every dis/en element or input
+   */
+
+
+/*PSEUDO ELEMENT
+::after    p::after    insert content after every <p> element
+::before   p::before    insert content before every <p> element
+::first-letter    p::first-letter   select the first letter of every <p>
+::first-line
+::selection     p::selection select the portion of element selected by user
+*/
+
+
+article p::first-line {
+  font-weight: bold;
+  font-size: 1.2em;}
+
+  section.join p::first-letter {
+    font-size: 1.5em;
+  }
+
+  p::selection {
+    background-color: yellow;
+  }
+
+  p::after{
+    content : "!!!!!!!!!!!!!!!!!!!!!!!";
+  }
+
+
+
+  /*RESPONSIVE STYLES */
+
+  /*1. meta tag in html file*/
+  /*2. media queries*/
+
+  /* @querytype target and (condition) {} */
+  @media screen and (max-width : 900px) {       /*eg.min-width : */
+
+    .banner .welcome h2{
+      font-size: 30px;
+    }
+
+    nav li {
+        font-size: 18px;
+    }
+  }
+  @media screen and (max-width : 500px) {
+
+    .banner .welcome h2{
+      font-size: 20px;
+    }
+
+    nav li {
+        font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width : 372px) {       /*eg.min-width : */
+
+    .banner .welcome h2{
+      font-size: 15px;
+    }
+    .banner .welcome {
+      position: relative;
+      text-align: center;
+      padding: 10px;
+    }
+    .banner .welcome br {
+      display : none;
+    }
+    .banner .welcome span{
+      font-size: 1em;
+    }
+    nav li {
+        font-size: 10px;
+    }
+    .images li {
+      width : 100%;
+      margin : 20px auto;
+      display: block;   /*top of each other*/
+    }
+  }
+
+
+
+  @media screen and (max-width : 250px) {
+
+    nav li {
+        font-size: 20px;
+        position: relative;
+        display: block;
+        width: 100%;
+        margin: 12px auto;
+    }
+
+    header {
+      position: relative;
+    }
+    nav {
+      top:0;
+    }
+  }
