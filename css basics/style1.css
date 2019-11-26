@@ -1,0 +1,72 @@
+/* To target an inviduall block or part, define its class in html, here use .class as selector */
+/*
+.error {
+  color: red;
+}
+
+p.error {
+  border: dotted black 1px;
+}
+
+p.feed {
+  color: blue;
+}
+*/
+
+
+
+/*using id to get particular selector */
+/*#content {
+  background-color: #ebebeb;
+}
+*/
+
+
+
+/*targeting children , eg. all Span inside div... parent child*/
+/*div span {
+background-color: orange;
+}
+*/
+/*div.error is the div having class as error but
+div .error is all the chilren inside div which are of type error */
+
+
+
+/*using attributes*/
+/*a[href] {
+  color: lightgreen;
+}*/
+/*a particular attribute value*/
+/*a[href="http://google.com"] {
+  background-color: grey ;
+  border: dotted 0.5px #ebebeb;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+*/
+/*substring basically*/
+/*a[href*="youtube"] {
+  background-color: green;
+}
+*/
+/*ends with " "*/
+/*a[href$=".com"] {
+             }
+*/
+
+/*inheritance and over-riding*/
+/* div {
+  color : coral;
+  margin : 20px;
+  border: solid 0.1px black;
+  background: #ebebeb;
+}
+p {
+  color: green;
+  margin : inherit;
+  border: inherit;
+}
+*/
+/*https://www.youtube.com/redirect?redir_token=4M7rn6ymvhD6Qgd6ltuQ04nf1Yx8MTU3NDQzMzIzMkAxNTc0MzQ2ODMy&q=https%3A%2F%2Fdeveloper.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FCSS%2FCascade&v=FHZn6706e3Q&event=video_description
+*/

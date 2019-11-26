@@ -1,0 +1,59 @@
+
+      h1 {
+        color : orange;
+        margin : 20px;
+        background-color: slategrey;
+        font-size: 40px;
+        font-family: arial;
+        text-decoration: underline;
+        text-align: center;
+
+      }
+      p {
+        color : black;
+        line-height: 25px;
+        letter-spacing:  1px;
+      /*  column-count: 3;
+        column-gap: 40px;  */
+/*      text-shadow: 3px 5px lightgrey;  horizontal vertical distance color*/
+      }
+
+      li {
+        border-style: double;
+        border-color: green;
+        list-style-type: square;
+      }
+            /*comments, /* * / or select ctrl / */
+      ul {
+        /* border-style: ridge;
+        border-width: 10px; */
+        border : crimson ridge 3px;
+    /*    border-bottom: blue 5px ridge;*/
+         }
+
+/*
+        span {
+          display: block;
+        }     /*span is an inline tag, means everytime opened or closed doesnt req new line or whole of space
+                  making it block means now it does
+        div {
+          display: inline;
+        }
+*/
+
+
+/*margin : space around the boundary outside
+  padding : space inside the boundary thingy */
+
+
+  span {
+      margin: 10px;
+      padding: 3px;
+      border: 1px dotted crimson;
+  }
+
+  div {
+    border : 5px black solid;
+    margin : 10px;
+    padding: 3px;
+  }
